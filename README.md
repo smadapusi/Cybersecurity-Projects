@@ -1,16 +1,16 @@
 # Cybersecurity-Projects
-# Author : Subhashree Madapusi
-# Project Name:  Elk Stack Project
+# Author : SM
+# Project Name:  Automated Elk Stack Deployment
 # Date : 08-Jun-2020
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
 
-  - ElkArchitecture.png
+  - [ElkArchitecture.png](Diagrams/ElkArchitecture.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the PLAYBOOK file may be used to install only certain pieces of it, such as Filebeat.
 
-  - filebeat-playbook.yml
+  - [filebeat-playbook.yml](Ansible/filebeat-playbook.yml)
 
 This document contains the following details:
 - Description of the Topology
@@ -74,7 +74,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-!docker_ps_output.png
+![docker_ps_output.png](Ansible/docker_ps_output.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -90,8 +90,8 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the /files/filebeat-configuration.yml file to ../filebeat/filebeat.yml file.
-- Update the /etc/ansible/hosts file to include ports
+- Copy the /files/[filebeat-configuration.yml](Ansible/filebeat-configuration.yml) file to ../filebeat/filebeat.yml file.
+- Update the /etc/ansible/[hosts](Ansible/hosts) file to include ports
 - Run the playbook, and navigate to <ElkserverIP>:5601 to check that the installation worked as expected.
 
 _Answer the following questions to fill in the blanks:_
@@ -99,8 +99,13 @@ _Answer the following questions to fill in the blanks:_
 - _Which file do you update to make Ansible run the playbook on a specific machine? /etc/ansible/hosts
 - _How do I specify which machine to install the ELK server on versus which to install Filebeat on? hosts: elkserver
 - _Which URL do you navigate to in order to check that the ELK server is running? <ElkserverIP>:5601
+  
+Bonus
+=====
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 To Download the playbook from git - git pull filebeat-playbook.yml
-To Update the playbook , you can either use text editors like "vi" or "nano". For example $vi filebeat-playbook.xml
+
+To Update the playbook , you can either use text editors like "vi" or "nano". 
+For example $vi filebeat-playbook.xml
+
 To Run the playbook , use ansible-playbook <plabybook filename> like this $ansible-playbook filebeat-playbook.xml
