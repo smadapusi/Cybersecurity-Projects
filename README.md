@@ -39,7 +39,7 @@ The configuration details of each machine may be found below.
 |----------|----------|------------|------------------|
 | Jump Box | Gateway  | 10.0.10.4  | Linux            |
 | DVWA-VM1 | WebServer| 10.0.10.5  | Linux            |
-| ELK      | Elkserver| 10.0.10.   | Linux            |
+| ELK      | Elkserver| 10.0.10.7  | Linux            |
 
 ### Access Policies
 
@@ -58,8 +58,6 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes/No              | Host Machine.        |
-|          |                     |                      |
-|          |                     |                      |
 
 ### Elk Configuration
 
@@ -92,7 +90,7 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the /files/filebeat-configuration.yml file to filebeat.yml file.
+- Copy the /files/filebeat-configuration.yml file to ../filebeat/filebeat.yml file.
 - Update the /etc/ansible/hosts file to include ports
 - Run the playbook, and navigate to <ElkserverIP>:5601 to check that the installation worked as expected.
 
@@ -103,3 +101,6 @@ _Answer the following questions to fill in the blanks:_
 - _Which URL do you navigate to in order to check that the ELK server is running? <ElkserverIP>:5601
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+To Download the playbook from git - git pull filebeat-playbook.yml
+To Update the playbook , you can either use text editors like "vi" or "nano". For example $vi filebeat-playbook.xml
+To Run the playbook , use ansible-playbook <plabybook filename> like this $ansible-playbook filebeat-playbook.xml
