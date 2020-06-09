@@ -51,7 +51,7 @@ Only the LoadBalancer machine can accept connections from the Internet. Access t
 
 Machines within the network can only be accessed by Jump Box.
 - Which machine did you allow to access your ELK VM? Jump Box
-  What was its IP address? 10.0.0.4
+  What was its IP address? 10.0.10.4
 
 A summary of the access policies in place can be found in the table below.
 
