@@ -10,7 +10,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the PLAYBOOK file may be used to install only certain pieces of it, such as Filebeat.
 
-  - filebeat-playbook.yml
+  - [filebeat-playbook.yml](Ansible/filebeat-playbook.yml)
 
 This document contains the following details:
 - Description of the Topology
@@ -90,8 +90,8 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the /files/filebeat-configuration.yml file to ../filebeat/filebeat.yml file.
-- Update the /etc/ansible/hosts file to include ports
+- Copy the /files/[filebeat-configuration.yml](Ansible/filebeat-configuration.yml) file to ../filebeat/filebeat.yml file.
+- Update the /etc/ansible/[hosts](Ansible/hosts) file to include ports
 - Run the playbook, and navigate to <ElkserverIP>:5601 to check that the installation worked as expected.
 
 _Answer the following questions to fill in the blanks:_
