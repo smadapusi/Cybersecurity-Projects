@@ -1,6 +1,6 @@
 # Cybersecurity-Projects
 # Author : Subhashree Madapusi
-# Project Name:  Elk Stack Project
+# Project Name:  Autoamted Elk Stack Deployment
 # Date : 08-Jun-2020
 ## Automated ELK Stack Deployment
 
@@ -74,7 +74,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-!docker_ps_output.png
+![docker_ps_output.png](Ansible/docker_ps_output.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
