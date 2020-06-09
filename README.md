@@ -1,6 +1,6 @@
 # Cybersecurity-Projects
 # Author : Subhashree Madapusi
-# Project Name:  Autoamted Elk Stack Deployment
+# Project Name:  Automated Elk Stack Deployment
 # Date : 08-Jun-2020
 ## Automated ELK Stack Deployment
 
