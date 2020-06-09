@@ -1,0 +1,46 @@
+mkdir Lucky_Duck_Investigations
+cd Lucky_Duck_Investigations/
+mkdir Roulette_loss_Investigation
+cd Roulette_loss_Investigation/
+mkdir Player_Analysis
+mkdir Dealer_Analysis
+mkdir Player_Dealer_Correlation
+touch Notes_Player_Analysis
+touch Notes_Dealer_Analysis
+touch Notes_Player_Dealer_Correlation
+mv Notes_Player_Analysis ./Player_Analysis/
+mv Notes_Dealer_Analysis ./Dealer_Analysis/
+mv Notes_Player_Dealer_Correlation ./Player_Dealer_Correlation/
+cd
+cd Downloads/
+unzip Roulette_Player_WinLoss_0310.zip 
+unzip Dealer_Schedules_0310.zip 
+cd 
+cd Lucky_Duck_Investigations/
+cd Roulette_loss_Investigation/
+cd Player_Analysis/
+mv /home/student/Downloads/Roulette_Player_WinLoss_0310/0310_win_loss_player_data .
+mv /home/student/Downloads/Roulette_Player_WinLoss_0310/0312_win_loss_player .
+mv /home/student/Downloads/Roulette_Player_WinLoss_0312_win_loss_player .
+mv /home/student/Downloads/Roulette_Player_WinLoss_0310/0312_win_loss_player_data .
+mv /home/student/Downloads/Roulette_Player_WinLoss_0310/0315_win_loss_player_data .
+cd .. 
+cd Dealer_Analysis/
+mv /home/student/Downloads/Dealer_Schedules_0310/0310_Dealer_schedule .
+mv /home/student/Downloads/Dealer_Schedules_0310/0312_Dealer_schedule .
+mv /home/student/Downloads/Dealer_Schedules_0310/0315_Dealer_schedule .
+cd ..
+cd Player_Analysis/
+grep -e '-\$' 0310_win_loss_player_data > Roulette_Losses
+grep -e '-\$' 0312_win_loss_player_data >> Roulette_Losses 
+grep -e '-\$' 0315_win_loss_player_data >> Roulette_Losses 
+echo "Number of times Loss Occurred on 0310: " > Notes_Player_Analysis 
+grep -e '-\$' 0310_win_loss_player_data | wc -l >> Notes_Player_Analysis 
+echo "Number of times Loss Occurred on 0312: " >> Notes_Player_Analysis 
+grep -e '-\$' 0312_win_loss_player_data | wc -l >> Notes_Player_Analysis 
+echo "Number of times Loss Occurred on 0315: " >> Notes_Player_Analysis 
+grep -e '-\$' 0315_win_loss_player_data | wc -l >> Notes_Player_Analysis 
+echo "Certain Player Named 'Mylie Schmidt' seems to Play in all these times"  >> Notes_Player_Analysis 
+grep -i "Mylie Schmidt" Roulette_Losses  >> Notes_Player_Analysis 
+echo Total Count of times 'Mylie Schmidt' was playing :: >> Notes_Player_Analysis 
+grep -i "Mylie Schmidt" Roulette_Losses  | wc -l >> Notes_Player_Analysis 
