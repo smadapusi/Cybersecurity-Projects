@@ -103,9 +103,24 @@ _Answer the following questions to fill in the blanks:_
 Bonus
 =====
 
-To Download the playbook from git - git pull filebeat-playbook.yml
-
-To Update the playbook , you can either use text editors like "vi" or "nano". 
-For example $vi filebeat-playbook.xml
-
-To Run the playbook , use ansible-playbook <plabybook filename> like this $ansible-playbook filebeat-playbook.xml
+(a) Start your Jumbox on MS Azure
+(b) Start your DVWA-VM1 and ElkServer Virtual machines
+(c) Login to the Jumpbox Server 
+(d) Do the following steps if your logging in for the first time, if not skip to step (e)
+    - Register yourself as a docker user at https://hub.docker.com/
+    - sudo apt-get update
+    - sudo apt-get install docker-io
+    - sudo docker pull <docker registered username>/<password>
+    - sudo docker run -ti <docker registered username>/ <password> bash
+(e) Select any docker names listed by running this command , sudo docker container list -a 
+(f) sudo docker start <select one docker container name from the list above>
+(g) sudo docker attach <selected docker name selected above>
+(h) Clone the repository from github if you running this playbook for the first time. If not skip step (h) and goto step(i)
+    to get the latest version of the playbook.
+    - git clone https://github.com/smadapusi/Cybersecurity-Projects.git
+    - git pull
+(i) To Download the latest version of playbook in git from the Ansible folder 
+     - Run this command from your local ansible folder , git pull filebeat-playbook.yml
+(j) To Update the playbook , you can either use text editors like "vi" or "nano". 
+    For example $vi filebeat-playbook.xml
+(k) To Run the playbook from inside the ansible container , use ansible-playbook <plabybook filename> like this $ansible-playbook filebeat-playbook.xml
