@@ -129,7 +129,9 @@ Bonus
 
 (h) Clone the repository from github if you running this playbook for the first time. 
     If not skip step (h) and goto step(i) to get the latest version of the playbook.
+    
          - git clone https://github.com/smadapusi/Cybersecurity-Projects.git
+         
          - git pull
 
     
