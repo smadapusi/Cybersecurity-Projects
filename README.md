@@ -123,30 +123,23 @@ Bonus
     
 (e) Select any docker names listed by running this command , sudo docker container list -a
 
-(f) sudo docker start <select one docker container name from the list above>
-  
-  
-(g) sudo docker attach <selected docker name selected above>
-  
-  
-(h) Clone the repository from github if you running this playbook for the first time. If not skip step (h) and goto step(i) to get the latest version of the playbook.
+(f) sudo docker start docker-container-name-from-above
 
+(g) sudo docker attach docker-container-name-from-above
 
-     git clone https://github.com/smadapusi/Cybersecurity-Projects.git
-     git pull
-    
-    
+(h) Clone the repository from github if you running this playbook for the first time. 
+    If not skip step (h) and goto step(i) to get the latest version of the playbook.
+         - git clone https://github.com/smadapusi/Cybersecurity-Projects.git
+         - git pull
+
     
 (i) To Download the latest version of playbook in git from the Ansible folder 
 
      Run this command from your local ansible folder , git pull filebeat-playbook.yml
      
-     
-     
 (j) To Update the playbook , you can either use text editors like "vi" or "nano". For example $vi filebeat-playbook.xml
-
-
 
 (k) To Run the playbook from inside the ansible container , use ansible-playbook <plabybook filename> like this 
   
        $ansible-playbook filebeat-playbook.xml
+         
